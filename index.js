@@ -290,7 +290,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: 'Calmao pa estoy procesando😎\n\n❗Por favor no hacer spam👏❗\n\nby shanduy',
+wait: '😑Estoy Buscando Tu Musica ,Estoy Procesando 😎\n\n❗Por favor no hacer spam👏❗\n\nby 💜Manuel Diaz💜',
 				success: '✔️ Listo ✔️',
                                 levelon: '❬ ✅ ❭ *Level activado*',
 				leveloff: ' ❬ ✅ ❭  *Level desactivado*',
@@ -301,19 +301,18 @@ async function starts() {
 					Iv: '❌ Link inválido ❌'
 				},
 				only: {
-					group: '[❗] Este comando es solo para grupos!',
-					ownerG: '[❗] Este comando solo puede ser utilizado por un admin del grupo!',
-					ownerB: '[❗] Este comando solo lo usa ShanBot!',
-					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo!',
-					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!',
-                                        pegatina: 'Calma crack estoy haciendo tu sticker 👏\n\n*Recuerda los stickersgif son de 6 segundos ❗*\n\nby shanduy',
-					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Esto puede demorar unos minutos*\n\nby shanduy',
-					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\nby shanduy',
-					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\nby shanduy',
-					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby shanduy',
-                                        mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby shanduy',
-					musica: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube ❗*\n\nby shanduy',
-					daftarB: `「NEFASTOOOOO」\n\nPERO PAAAAAAAAAA!\n\nNo estas registrado en mi base de datos 😳 \n\nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar shanduy`,
+					group: '[❗] Este comando es solo para grupos!...😑',
+					ownerG: '[❗] Este comando solo puede ser utilizado por un admin del grupo!...😑',
+					ownerB: '[❗] Este comando solo lo usa ManuBot!...😑😐',
+					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo!...😑',
+					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!...😑😒',
+                                        pegatina: 'Estoy haciendo tu sticker 👏\n\n*Recuerda los stickersgif son de 6 segundos ❗...😴*\n\nby 💜Manuel Diaz💜',
+					attp: 'Hey Brother 👋 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\nby 💜Manuel Diaz💜',
+					mpcancion: '😑Estoy Convertiendo,Estoy Procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\nby 💜Manuel Diaz💜',
+					mpa: 'Hey Brother 👋 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby 💜Manuel Diaz💜',
+                                        mpv: 'Hey Brother 👋\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby 💜Manuel Diaz💜',
+					musica: '😑Estoy Buscando Tu Musica 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube ❗*\n\nby 💜Manuel Diaz💜',
+					daftarB: `「NEFASTOOOOO」\n\nPERO PAAAAAAAAAA!\n\nNo estas registrado en mi base de datos 😳 \n\nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar Manuel Diaz`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -719,7 +718,7 @@ async function starts() {
 					} else {
 						mentions(`Pedido recibido, chao pa 👋 : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupRemove(from, mentioned)
-					client.sendMessage(mentioned, 'Chao puta gorda', text)
+					client.sendMessage(mentioned, 'Chao 👋', text)
 					}
 					break
 				case 'exe':
@@ -889,22 +888,13 @@ async function starts() {
 						fs.unlinkSync(ran)
 					})
 					break
-               case 'letra':
-			if (args.length == 0) return reply(from, 'Ingrese el nombre de su canción')
-			try {
-				const liric = await axios.get(`https://some-random-api.ml/lyrics?title=${body.slice(7)}`)
-				await client.sendFileFromUrl(from, liric.data.thumbnail.genius, '', `*Titulo:*\n\n${liric.data.title}\n\n*Letra:*\n\n${liric.data.lyrics}`)
-			} catch (error) {
-				await reply(from, 'Lo siento, no encontré tu canción')
-			}
-			break
-		case 'play':   
+               case 'play':   
 	        if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy25`)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduytf`)
                if (anu.error) return reply(anu.error)
-                 infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título* : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE*`
+                 infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título* : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO SPAMES Manuel Diaz*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
